@@ -1,0 +1,238 @@
+body    { 
+    font-family: "Noto Serif KR";
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2.0rem;
+    font-weight: 700;
+  }
+
+/* �쒕ぉ�� �고듃 �ㅼ젙 */
+h1, h2  {
+    font-size: 4.8rem;
+    font-weight: 700; 
+}
+
+/* css 珥덇린�� */
+html    {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+button  {
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
+
+a       {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* header(濡쒓퀬, 硫붾돱) �ㅼ젙 */
+
+header  {
+    position: fixed;
+    display: flex;
+    top: 0px;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.menu   {
+    padding-top: 1.8rem;
+    padding-right: 2.4rem;
+}
+
+.pageMenu{
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    margin-bottom: 1.8rem;
+    margin-right: 5rem;
+}
+
+.selectedPage   {
+    font-weight: 700;
+}
+
+.unselectedPage {
+    display: inline-flex;
+    gap: 2.6rem;
+    font-weight: 400;
+}
+
+.line   {
+    position: fixed;
+    top: 0;
+    height: calc(1.8rem + 2.4rem + 1.8rem + 2.1rem);
+    width: 50vw;
+    background-color: #FFF;
+    border-bottom: #000 solid;
+    z-index: -1;
+}
+
+.listMenu   {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.selectedList   {
+    display: flex;
+    height: 4.2rem;
+    padding: 0rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 2.1rem;
+    background: #000;
+    font-weight: 700;
+    color: #FFF;
+}
+
+.unselectedList {
+    display: flex;
+    height: 42px;
+    padding: 0px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 21px;
+    background: #FFF;
+    font-weight: 400;
+}
+:root {
+  --color-fg: #000;
+  --color-bg: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.title {
+  text-align:left; /* 가운데 정렬 */
+  font-size: 48px; /* 글자 크기 설정 */
+  margin-top: 15rem; /* header와의 간격 설정 */
+  margin-right: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content:center;
+}
+
+.explanation {
+  text-align:left; /* 가운데 정렬 */
+  font-size: 20px; /* 글자 크기 설정 */
+  margin-top: 6rem; /* header와의 간격 설정 */
+  margin-left: 40rem;
+  font-weight: 400;
+  display: flex;
+  justify-content:center;
+}
+
+.scroll-x {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+.wrapper {
+  --size: clamp(12rem, 1rem + 50vw, 20rem);
+  --gutter: 3rem;
+  --gap: 2rem;
+  scroll-snap-type: x mandatory;
+  display: grid;
+  padding-block: var(--gutter);
+}
+
+.items {
+  grid-area: content;
+  display: flex;
+  gap: var(--gap);
+
+  &::after {
+    content: "";
+    padding-inline-end: max(
+      var(--gutter),
+      (100vw - var(--size)) / 2 - var(--gutter)
+    );
+  }
+
+  > * {
+    display: grid;
+    place-content: center;
+    flex-shrink: 0;
+    inline-size: var(--size);
+    aspect-ratio: 4 / 5;
+    scroll-snap-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--color-fg);
+    border-radius: 0.5rem;
+  }
+}
+.items a {
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  outline: none; /* 포커스 시 나타나는 테두리 제거 */
+}
+
+.items img {
+  width: 36.25rem; /* 가로 길이를 rem 단위로 설정 */
+  display: block; /* 이미지를 블록 요소로 만들어 점 제거 */
+}
+
+@supports (animation-timeline: view()) {
+  .items > * {
+    --scale: 0.9;
+    --offset: var(--gap);
+    animation: scale linear both, fade linear both;
+    animation-timeline: view(inline);
+    animation-range: cover 30% cover 70%, cover 5% cover 95%;
+  }
+
+  @keyframes scale {
+    from,
+    to {
+      scale: var(--scale);
+    }
+    50% {
+      scale: 1;
+    }
+    from {
+      translate: var(--offset) 0;
+    }
+
+    to {
+      translate: calc(var(--offset) * -1) 0;
+    }
+  }
+
+  @keyframes fade {
+    from,
+    to {
+      opacity: 0;
+    }
+    10%,
+    90% {
+      opacity: 1;
+    }
+  }
+}
+@media (max-height: 600px) {
+  .item {
+      height: 50vh; /* 화면 높이에 맞게 조정 */
+  }
+}
