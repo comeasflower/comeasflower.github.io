@@ -38,22 +38,46 @@ a       {
 header  {
     position: fixed;
     display: flex;
-    top: 0px;
     justify-content: space-between;
     width: 100vw;
+    top: 0px;
+}
+
+main    {
+    margin: 16rem 2.4rem;
+    gap: 16rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+section {
+    gap: 16rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.logo   {
+    margin-left: 2.4rem;
+    background-color: #FFF;
+}
+
+.logoImg    {
+    width: 111px;
 }
 
 .menu   {
-    padding-top: 1.8rem;
-    padding-right: 2.4rem;
+    margin-top: 1.8rem;
+    margin-right: 2.4rem;
+    width: calc(50vw - 2.4rem);
 }
 
 .pageMenu{
     display: flex;
     justify-content: space-between;
-    width: 50vw;
+    width: 100%;
     margin-bottom: 1.8rem;
-    margin-right: 5rem;
 }
 
 .selectedPage   {
@@ -63,16 +87,15 @@ header  {
 .unselectedPage {
     display: inline-flex;
     gap: 2.6rem;
-    font-weight: 400;
 }
 
 .line   {
     position: fixed;
     top: 0;
-    height: calc(1.8rem + 2.4rem + 1.8rem + 2.1rem);
-    width: 50vw;
+    height: 8.3rem;
+    width: calc(50vw - 2.4rem);
     background-color: #FFF;
-    border-bottom: #000 solid;
+    border-bottom: #000 solid 1px;
     z-index: -1;
 }
 
@@ -90,6 +113,7 @@ header  {
     align-items: center;
     gap: 1rem;
     border-radius: 2.1rem;
+    border-width: 1px;
     background: #000;
     font-weight: 700;
     color: #FFF;
@@ -105,8 +129,8 @@ header  {
     box-sizing: border-box;
     border-style: solid;
     border-radius: 21px;
+    border-width: 1px;
     background: #FFF;
-    font-weight: 400;
 }
 :root {
   --color-fg: #000;
