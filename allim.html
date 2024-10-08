@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이포그래피 꽃</title>
+    <link rel="stylesheet" href="allim1.css">
+    <link rel="stylesheet" href="allim2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="">
+                <img src="로고.png" alt="꽃">
+            </a>
+        </div>
+        <div class="menu">
+            <div class="pageMenu">
+                <div class="selectedPage">
+                    <a href="">소식</a>
+                </div>
+                <div class="unselectedPage">
+                    <a href="">아카이브</a>
+                    <a href="">소개</a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="listMenu">
+                <div class="selectedList">꽃밤</div>
+                <div class="unselectedList">알림</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="margin-left"></div>
+        
+        <div class="content-left">
+            <div class="header">
+                <h2 class="title">제목</h2>
+                <span class="date-label">게시일</span>
+            </div>
+            <hr>
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slide">
+                        <div class="notice-item" onclick="loadContent('[마감] 12.0기 신입부원 모집', this)">
+                            <span class="notice-title">[마감] 12.0기 신입부원 모집</span>
+                            <span class="notice-date">2024-03-09</span>
+                        </div>
+                        <!-- 게시글 추가 가능 -->
+                    </div>
+                    <div class="slide">
+                        <div class="notice-item" onclick="loadContent('꽃 정기전《꽃꽂이, flower arrangement》오픈 안내', this)">
+                            <span class="notice-title">꽃 정기전《꽃꽂이, flower arrangement》오픈 안내</span>
+                            <span class="notice-date">2024-03-07</span>
+                        </div>
+                        <!-- 게시글 추가 가능 -->
+                    </div>
+                    <!-- 더 많은 게시글 추가 가능 -->
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <span class="page-number" data-index="0">1</span>
+                <span class="page-number" data-index="1">2</span>
+                <!-- 페이지 번호 추가 가능 -->
+            </div>
+        </div>
+
+        <div class="margin-middle"></div>
+        
+        <div class="content-right" id="content">
+            <!-- 자바스크립트로 내용이 동적으로 업데이트될 예정 -->
+        </div>
+      
+        <div class="margin-right"></div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- 페이지네이션 스크립트 -->
+    <script>
+        $(document).ready(function() {
+            const itemsPerPage = 2; // 페이지당 게시글 수
+            const $postItems = $('.notice-item'); // 모든 게시글
+            const totalItems = $postItems.length; // 총 게시글 수
+            const totalPages = Math.ceil(totalItems / itemsPerPage); // 총 페이지 수
+
+            function showPage(page) {
+                $postItems.hide(); // 모든 게시글 숨김
+                const start = (page - 1) * itemsPerPage; // 시작 인덱스
+                const end = start + itemsPerPage; // 끝 인덱스
+                $postItems.slice(start, end).show(); // 해당 페이지의 게시글만 보임
+            }
+
+            // 페이지 링크 생성
+            const $pagination = $('.pagination'); // 페이지네이션을 표시할 요소
+            for (let i = 1; i <= totalPages; i++) {
+                $pagination.append(`<span class="page-item" data-page="${i}">${i}</span>`); // 페이지 링크 추가
+            }
+
+            // 페이지 링크 클릭 이벤트
+            $pagination.on('click', '.page-item', function() {
+                const page = $(this).data('page'); // 클릭한 페이지 번호
+                showPage(page); // 해당 페이지 보여줌
+            });
+
+            // 처음 페이지 로드
+            showPage(1); // 첫 번째 페이지 로드
+        });
+
+        // 여기서부터 자바스크립트 코드 (loadContent 함수)
+        function loadContent(noticeTitle, element) {
+            const contentElement = document.getElementById('content');
+            const allItems = document.querySelectorAll('.notice-item');
+            
+            // 모든 항목 선택 해제
+            allItems.forEach(item => item.classList.remove('active'));
+            
+            // 선택된 항목 강조
+            element.classList.add('active');
+
+            // 본문 내용 설정
+            let contentText = '';
+            if (noticeTitle === '[마감] 12.0기 신입부원 모집') {
+                contentText = `
+                    <h2>${noticeTitle}</h2>
+                    <hr class="hr-solid"/>
+                    <p>이화여대 한글타이포그래피 소모임 ‘꽃’에서 12.0기 신입부원을 모집합니다.<br><br>이화여자대학교 한글 타이포그래피 소모임 ‘꽃’은 김춘수 『꽃』의 한 구절인 ‘내가 그의 이름을 불러 주었을 때 그는 나에게로 와서 꽃이 되었다’에서 이름을 빌려왔습니다. ...</p>
+                `;
+            } else if (noticeTitle === '꽃 정기전《꽃꽂이, flower arrangement》오픈 안내') {
+                contentText = `
+                    <h2>${noticeTitle}</h2>
+                    <hr class="hr-solid"/>
+                    <p>꽃의 여섯 번째 정기 작품전 《꽃꽂이, flower arrangement》이 다음주 월요일에 오픈합니다. ...</p>
+                `;
+            }
+            // 추가된 게시글에 대한 조건 추가 가능
+
+            contentElement.innerHTML = contentText; // 본문 내용 업데이트
+        }
+    </script>
+</body>
+</html>
