@@ -87,6 +87,7 @@ section {
 .unselectedPage {
     display: inline-flex;
     gap: 2.6rem;
+    font-weight: 400;
 }
 
 .line   {
@@ -131,6 +132,7 @@ section {
     border-radius: 21px;
     border-width: 1px;
     background: #FFF;
+    font-weight: 400;
 }
 :root {
   --color-fg: #000;
