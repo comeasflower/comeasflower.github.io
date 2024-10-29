@@ -113,15 +113,6 @@ header  {
 
 
 
-
-
-
-
-
-
-
-
-
 * {
   box-sizing: border-box;
 }
@@ -256,7 +247,6 @@ header  {
   height: 100px;
   
 }
-
 
 .card__bio {
   opacity: 0;
