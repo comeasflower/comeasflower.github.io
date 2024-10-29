@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+    <title>꽃</title> 
+    <link rel="stylesheet" href="/style.css"/>
+    <script src="/script.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+      <div class="box1">      
+        <div class="title1">이화여자대학교</div>
+        <div class="news">꽃 소식</div>
+      </div>
+    
+      <div class="box2">
+        <div class="logo"><img src="https://cdn.glitch.global/f082c33f-9e66-442d-bbd7-f26a9186afe9/logo?v=1727144662359" width="100%"/></div>
+        <div class="about">꽃 소개</div>
+    </div>
+    
+    <div class="box3">
+          <div class="title2">타이포그라피 학회</div>
+        <div class="project">꽃 프로젝트<br>아카이빙</div>
+            
+        </div>
+      
+
+
+
+    
+  </body> 
+</html>
