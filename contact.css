@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+/* 폰트 설정 (구글폰트, 본명조) */
+
+
+body    {
+    font-family: "Noto Serif KR", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2.0rem;
+    font-weight: 400; 
+    margin: 0px;
+    padding: 0px;
+}
+
+.slide {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background-color: #ffffff;
+}
+
+.slide .group {
+    width: 1878px;
+    height: 111px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.slide .view-wrapper {
+    width: 915px;
+    height: 107px;
+    left: 963px;
+    position: absolute;
+    top: 0;
+}
+
+.slide .view {
+    height: 107px;
+}
+
+.slide .overlap-group {
+    position: relative;
+    width: 921px;
+    height: 107px;
+}
+
+.slide .rectangle {
+    position: absolute;
+    width: 915px;
+    height: 86px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff80;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #000000;
+}
+
+.slide .div {
+    position: absolute;
+    width: 916px;
+    height: 29px;
+    top: 18px;
+    left: 5px;
+}
+
+.slide .text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 871px;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.slide .text-wrapper-2 {
+    position: absolute;
+    top: 0;
+    left: 767px;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.slide .text-wrapper-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.slide .frame {
+    gap: 24px;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.slide .div-wrapper {
+    height: 42px;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 30px;
+    position: relative;
+    flex: 0 0 auto;
+    background-color: #000000;
+    border-radius: 21px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.slide .text-wrapper-4 {
+    position: relative;
+    width: fit-content;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.slide .frame-2 {
+    height: 42px;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 30px;
+    position: relative;
+    flex: 0 0 auto;
+    background-color: #ffffff;
+    border-radius: 21px;
+    border: 1px solid;
+    border-color: #000000;
+    display: inline-flex;
+    align-items: center;
+}
+
+.slide .text-wrapper-5 {
+    position: relative;
+    width: fit-content;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.slide .image {
+    position: absolute;
+    width: 111px;
+    height: 111px;
+    top: 0;
+    left: 0;
+}
+
+.slide .overlap {
+    position: absolute;
+    width: 916px;
+    height: 57px;
+    top: 505px;
+    left: 584px;
+}
+
+.slide .text-wrapper-6 {
+    position: absolute;
+    width: 916px;
+    top: 14px;
+    left: 0;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 32.0px;
+}
+
+.slide .text-wrapper-7 {
+    position: absolute;
+    top: 0;
+    left: 66px;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 700;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.slide .overlap-2 {
+    position: absolute;
+    width: 944px;
+    height: 57px;
+    top: 621px;
+    left: 543px;
+}
+
+.slide .text-wrapper-8 {
+    position: absolute;
+    width: 944px;
+    top: 14px;
+    left: 0;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 32.0px;
+    white-space: nowrap;
+}
+
+.slide .text-wrapper-9 {
+    position: absolute;
+    top: 0;
+    left: 103px;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 700;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.slide .text-wrapper-10 {
+    position: absolute;
+    top: 395px;
+    left: 932px;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.slide .text-wrapper-11 {
+    position: absolute;
+    top: 752px;
+    left: 932px;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
