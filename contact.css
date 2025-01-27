@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
 /* 폰트 설정 (구글폰트, 본명조) */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Ornaments:wght@400&display=swap');
 
 body { 
-    font-family: "Noto Serif KR";
+    font-family: 'Noto Serif KR', serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 2.0rem;
@@ -251,21 +252,6 @@ html, body {
   }
 }
 
-@media (max-height: 600px) {
-  .item {
-      height: 50vh;
-  }
-
-  .main-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-top: 10rem; /* 화면 크기에 맞게 여백을 조정 */
-    font-size: 1.2rem;
-    background: #ffffff;
-    overflow: hidden;
-  }
-}
 
 /* main-container 스타일 */
 .main-container {
@@ -278,36 +264,44 @@ html, body {
   margin: 2rem auto;
 }
 
+
 .text {
-  display: block;
-  position: relative;
-  height: 40px;
-  margin: 396px 0 0 932px;
-  color: #000000;
-  font-family: Bodoni Ornaments, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 40px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 4;
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+position: absolute;
+height: 40px;
+top: 396px;
+left: calc(50% - 28px);
+color: #000000;
+font-family: "Bodoni Ornaments";
+font-size: 40px;
+font-weight: 400;
+line-height: 40px;
+text-align: left;
+white-space: nowrap;
+z-index: 4;
 }
 
 .text-2 {
-  display: block;
-  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; /* 수평 중앙 정렬 */
+  position: relative; /* relative로 변경하여 부모 요소에 맞춰 배치 */
   height: 40px;
-  margin: 317px 0 0 932px;
+  top: 714px;
+  left: 50%; /* 부모 요소의 50% 위치로 수평 중앙 배치 */
+  transform: translateX(-50%) rotate(-180deg); /* translateX와 rotate를 하나의 transform 속성에서 처리 */
   color: #000000;
-  font-family: Bodoni Ornaments, var(--default-font-family);
+  font-family: "Bodoni Ornaments";
   font-size: 40px;
   font-weight: 400;
   line-height: 40px;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
-  transform: rotate(-180deg);
   z-index: 5;
 }
+
 
 .text-3 {
   display: flex;
