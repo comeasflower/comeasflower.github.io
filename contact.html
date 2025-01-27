@@ -1,46 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="globals.css" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="slide">
-            <div class="group">
-                <div class="view-wrapper">
-                    <div class="view">
-                        <div class="overlap-group">
-                            <div class="rectangle"></div>
-                            <div class="div">
-                                <div class="text-wrapper">소개</div>
-                                <div class="text-wrapper-2">아카이브</div>
-                                <div class="text-wrapper-3">소식</div>
-                            </div>
-                            <div class="frame">
-                                <div class="div-wrapper"><div class="text-wrapper-4">연락처</div></div>
-                                <div class="frame-2"><div class="text-wrapper-5">함께한 사람들</div></div>
-                                <div class="frame-2"><div class="text-wrapper-5">꽃</div></div>
-                            </div>
-                        </div>
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logoImg" src="https://cdn.glitch.global/67d39ca6-baa8-4d2e-958c-a3ef5daa9d53/logo.png?v=1737920074468" alt="꽃">
+                </a>
+            </div>
+            <div class="menu">
+                <div class="pageMenu">
+                    <div class="selectedPage">
+                        <a href="news.html">소식</a>
+                    </div>
+                    <div class="unselectedPage">
+                        <a href="archive.html">아카이브</a>
+                        <a href="index.html">소개</a>
                     </div>
                 </div>
-                <img class="image" src="img/logo.png" />
+                <div class="line"></div>
+                <div class="listMenu">
+                    <div class="selectedList">연락처</div>
+                    <div class="unselectedList"><a href="index.html">함께한 사람들</a></div>
+                    <div class="unselectedList"><a href="index.html">꽃</a></div>
+                </div>
             </div>
-            <div class="overlap">
-                <div class="text-wrapper-6">come.as.flower@gmail.com</div>
-                <div class="text-wrapper-7">이메일</div>
-            </div>
-            <div class="overlap-2">
-                <div class="text-wrapper-8">@comeasflower_ewha</div>
-                <div class="text-wrapper-9">인스타그램</div>
-            </div>
-            <div class="text-wrapper-10">
-              <img class="image2" src="img/e1.png" />
-            </div>
-            <div class="text-wrapper-11">
-              <img class="image3" src="img/e2.png" />
-            </div>
+        </header>
+
+        <!-- main-container를 header 바로 뒤에 위치시킴 -->
+        <div class="main-container">
+            <span class="img2">
+                <img class="image2" src="img/e1.png" alt="이미지1" />
+            </span>
+            <span class="text-3">이메일</span>
+            <span class="text-4">come.as.flower@gmail.com</span>
+            <span class="text-5">인스타그램</span>
+            <span class="text-6">@comeasflower_ewha</span>
+            <span class="img3">
+                <img class="image3" src="img/e2.png" alt="이미지2" />
+            </span>
         </div>
+
     </body>
 </html>
