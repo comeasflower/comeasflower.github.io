@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+/* 폰트 설정 (구글폰트, 본명조) */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+/* 폰트 설정 (구글폰트, 본명조) */
+
+body    {
+    font-family: "Noto Serif KR", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2.0rem;
+    font-weight: 400; 
+    margin: 0px;
+    padding: 0px;
+}
+
+.white-box {
+    width: 100%;
+    height: 108px; /* 박스 높이 */
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0); /* 아래에 그림자 추가 (옵션) */
+    display: flex;
+    justify-content: center; /* 중앙 정렬 (가로) */
+    align-items: center; /* 중앙 정렬 (세로) */
+    position: fixed; /* 스크롤해도 상단에 고정 */
+    z-index: -1;
+}
+
+/* 제목용 폰트 설정 */
+h1, h2  {
+    font-size: 4.8rem;
+    font-weight: 700; 
+}
+
+/* css 초기화 */
+html    {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+button  {
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
+
+a       {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* header(로고, 메뉴) 설정 */
+
+header  {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.logoImg    {
+    width: 111px;
+}
+
+.menu   {
+    margin-top: 1.8rem;
+    margin-right: 2.4rem;
+    width: calc(50vw - 2.4rem);
+}
+
+.pageMenu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
+
+.selectedPage   {
+    font-weight: 700;
+}
+
+.unselectedPage {
+    display: inline-flex;
+    gap: 2.6rem;
+}
+
+.line   {
+    position: fixed;
+    top: 0;
+    height: 8.3rem;
+    width: calc(50vw - 2.4rem);
+    background-color: #FFF;
+    border-bottom: #000 solid 1px;
+    z-index: -1;
+}
+
+.listMenu   {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.selectedList   {
+    display: flex;
+    height: 4.2rem;
+    padding: 0rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 2.1rem;
+    border-width: 1px;
+    background: #000;
+    font-weight: 700;
+    color: #FFF;
+}
+
+.unselectedList {
+    display: flex;
+    height: 42px;
+    padding: 0px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 21px;
+    border-width: 1px;
+    background: #FFF;
+}
+
+
+.section01  {
+    position: relative;
+    top: 210px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: -2; /* 섹션1의 z-index를 양수로 설정하여 사진보다 위로 보이게 함 */
+}
+
+.img {
+    width: 28%;
+    margin-left: 160px;
+    height: 27%;
+}
+
+
+.explanation    {
+    width: 48vw;
+    margin-right: 50px;
+    position: relative;
+    top: -10px;
+    font-size: 1.8rem; /* 전체 텍스트 크기를 80%로 줄임 */
+}
+
+.explanation h2 {
+    position: relative;
+    top: -30px; 
+    font-size: 4rem
+}
+
+.date{
+    margin-top: 35px
+}
+
+.place{
+    margin-top: -10px
+}
+
+.logo img{
+    width: 100px;
+}
+
+.participants1{
+    margin-top: 35px;
+}
+
+.participants2{
+    margin-top: 3px;
+}
+
+.participants3{
+    margin-top: 3px;
+}
+
+.participants4{
+    margin-top: 3px;
+}
+
+.participants5{
+    margin-top: 3px;
+}
+
+.participants6{
+    margin-top: 3px;
+}
+
+
+.section02 {
+    position: relative;
+    z-index: 0; /* 섹션2의 z-index를 0으로 설정하여 섹션1 위에 쌓이지 않도록 함 */
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 310px; /* 상단 간격을 넉넉히 주어 텍스트와 겹치지 않도록 함 */
+    z-index: 1;
+    margin-bottom: 0px;
+}
+
+.slider-container {
+    position: relative;
+    width: calc(100vw - 4.8rem); /* 슬라이더의 너비를 80%로 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    overflow: hidden; /* 슬라이더 영역을 넘치는 이미지가 보이지 않게 설정 */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * totalSlides);
+    height: 880px;
+}
+
+.exhib {
+    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    height: 1000px;
+    object-fit: cover;
+    margin: auto; /* 중앙 정렬 */
+    flex-shrink: 0; /* 줄어들지 않도록 설정 */
+}
+
+.dot {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%);
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -25px;
+    gap: 12px;
+    align-items: center;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* 이전/다음 버튼 설정 */
+.prev, .next {
+    position: absolute;
+    top: 50%;  /* 버튼을 세로 중앙에 위치 */
+    transform: translateY(-60%);  /* 버튼이 중앙에 오도록 조정 */
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 2;  /* 이미지 위에 버튼이 보이도록 설정 */
+}
+
+.prev {
+    left: 0; /* 왼쪽 끝에 위치 */
+}
+
+.next {
+    right: 0; /* 오른쪽 끝에 위치 */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}

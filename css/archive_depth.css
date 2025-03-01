@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+/* 폰트 설정 (구글폰트, 본명조) */
+
+body    {
+    font-family: "Noto Serif KR", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2.0rem;
+    font-weight: 400; 
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 제목용 폰트 설정 */
+h1, h2  {
+    font-size: 4.8rem;
+    font-weight: 700; 
+}
+
+/* css 초기화 */
+html    {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+button  {
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
+
+a       {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* header(로고, 메뉴) 설정 */
+
+header  {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.menu   {
+    margin-top: 1.8rem;
+    margin-right: 2.4rem;
+}
+
+.pageMenu{
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    margin-bottom: 1.8rem;
+}
+
+.selectedPage   {
+    font-weight: 700;
+}
+
+.unselectedPage {
+    display: inline-flex;
+    gap: 2.6rem;
+}
+
+.line   {
+    position: fixed;
+    top: 0;
+    height: calc(1.8rem + 2.4rem + 1.8rem + 2.1rem);
+    width: 50vw;
+    background-color: #FFF;
+    border-bottom: #000 solid;
+    z-index: -1;
+}
+
+.listMenu   {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.selectedList   {
+    display: flex;
+    height: 4.2rem;
+    padding: 0rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 2.1rem;
+    background: #000;
+    font-weight: 700;
+    color: #FFF;
+}
+
+.unselectedList {
+    display: flex;
+    height: 42px;
+    padding: 0px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 21px;
+    background: #FFF;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+.cards {
+  max-width: 5000px;
+  padding: 50px;
+  margin: 0 auto;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card--expanded {
+  cursor: default;
+}
+
+.card__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: white;
+  overflow: hidden;
+}
+
+.card:nth-child(2) .card__content {
+  background: lightgrey;
+}
+
+.card:nth-child(3) .card__content {
+  background: white;
+}
+
+.card--expanded .card__content {
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.card__user-image {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  will-change: transform;
+  transform-origin: 0 0;
+}
+
+.card--expanded .card__user-image {
+  width: 100px;
+  height: 100px;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  transform-origin: 0 0;
+  line-height: 1;
+}
+
+.card--expanded .card__title {
+  font-size: 30px;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px 14px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card--expanded .card__header {
+  flex-direction: row;
+}
+
+.card__user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card--expanded .card__user-info {
+  align-items: flex-start;
+  gap: 2px 0;
+  width: 100px;
+  height: 100px;
+  
+}
+
+.card__bio {
+  opacity: 0;
+  height: 0;
+  transform-origin: 0 0;
+}
+
+.card--expanded .card__bio {
+  max-width: 800px;
+  margin: 20px auto 0;
+  opacity: 1;
+  height: auto;
+}
+
+.card__close {
+  position: absolute;
+  right: -40px;
+  top: 20px;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  color: grey;
+  padding: 10px;
+}
+
+.card--expanded .card__close {
+  transition: 0.3s all ease;
+  transition-delay: 0.3s;
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-100%) translateX(-20px);
+}
+
+.card--animatable .card__user-image,
+.card--animatable .card__title,
+.card--animatable .card__subtitle,
+.card--animatable .card__user-links,
+.card--animatable .card__bio,
+.card--animatable .card__images,
+.card--animatable .card__content {
+  transition: all 0.5s cubic-bezier(0, 0, 0.21, 1);
+}
+
+@media (min-width: 520px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card__images {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card__images {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
