@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const jsonData = await response.json();
 
         // 현재 HTML 문서의 제목 가져오기
-        const pageTitle = document.title.trim();
+        const pageTitle = document.title.trim().substring(10);
 
         // projects에서 현재 페이지 제목과 같은 name을 가진 프로젝트 찾기
         const project = jsonData["12.0projects"].find(p => p.name === pageTitle);
