@@ -34,31 +34,3 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.error("데이터를 불러오는 중 오류 발생:", error);
     }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const worksList = document.querySelector(".worksList");
-    let scrollAmount = 0;
-    let isScrolling = false;
-
-    worksList.addEventListener("wheel", (event) => {
-        event.preventDefault(); // 기본 스크롤 방지
-
-        let scrollStep = event.deltaY * 0.5; // 스크롤 감도 조절 (값을 조정하면 속도가 달라짐)
-        scrollAmount += scrollStep;
-
-        if (!isScrolling) {
-            isScrolling = true;
-            smoothScroll();
-        }
-    });
-
-    function smoothScroll() {
-        if (Math.abs(scrollAmount) > 1) {
-            worksList.scrollLeft += scrollAmount * 0.1; // 부드러운 움직임 적용
-            scrollAmount *= 0.9; // 점점 감속
-            requestAnimationFrame(smoothScroll); // 애니메이션 프레임 업데이트
-        } else {
-            isScrolling = false;
-        }
-    }
-});

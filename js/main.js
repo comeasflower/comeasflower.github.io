@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // 리스트 메뉴 클릭 시 해당 섹션으로 이동
     listItems.forEach(item => {
         item.addEventListener('click', () => {
-            listItems.forEach(el => el.classList.replace('selectedList', 'unselectedList'));
+            listItems.forEach(el => el.classList.remove('selected'));
 
-            item.classList.replace('unselectedList', 'selectedList');
+            item.classList.add('selected');
 
             const year = item.textContent.trim();
             const targetSection = document.getElementById(year);
@@ -72,14 +72,42 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 listItems.forEach(item => {
                     if (item.textContent.trim() === sectionYear) {
-                        item.classList.replace('unselectedList', 'selectedList');
+                        item.classList.add('selected');
                     } else {
-                        item.classList.replace('selectedList', 'unselectedList');
+                        item.classList.remove('selected');
                     }
                 });
             }
         });
     });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const worksList = document.querySelector(".worksList");
+    let scrollAmount = 0;
+    let isScrolling = false;
+
+    worksList.addEventListener("wheel", (event) => {
+        event.preventDefault(); // 기본 스크롤 방지
+
+        let scrollStep = event.deltaY * 0.5; // 스크롤 감도 조절 (값을 조정하면 속도가 달라짐)
+        scrollAmount += scrollStep;
+
+        if (!isScrolling) {
+            isScrolling = true;
+            smoothScroll();
+        }
+    });
+
+    function smoothScroll() {
+        if (Math.abs(scrollAmount) > 1) {
+            worksList.scrollLeft += scrollAmount * 0.1; // 부드러운 움직임 적용
+            scrollAmount *= 0.9; // 점점 감속
+            requestAnimationFrame(smoothScroll); // 애니메이션 프레임 업데이트
+        } else {
+            isScrolling = false;
+        }
+    }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
