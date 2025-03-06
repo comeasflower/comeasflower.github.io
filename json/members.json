@@ -1,5 +1,5 @@
 {
-    "members": {
+    "past": {
         "1.0": [
             {
                 "name": "구선아",
@@ -223,7 +223,9 @@
                 "name": "김채영",
                 "contact": "hxuef"
             }
-        ],
+        ]
+    },
+    "active": {
         "11.0": [
             {
                 "name": "김한슬",
@@ -257,11 +259,11 @@
             },
             {
                 "name": "김예진",
-                "contact": "leav.eand"
+                "contact": "yejinnnk"
             },
             {
                 "name": "이민서",
-                "contact": "minszle"
+                "contact": "minsarchive_1"
             },
             {
                 "name": "윤태희",
