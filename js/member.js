@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json()) 
         .then(data => {
             generateActiveMembers(data.active, "활동 중인 사람들", ".activeMembers");
-            generatePastMembers(data.past, "함께한 사람들", ".pastMembers");
+            generateActiveMembers(data.past, "함께한 사람들", ".pastMembers");
         })
         .catch(error => console.error("JSON 로드 오류:", error));
 });
