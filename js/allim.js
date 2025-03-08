@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const contentLeft = document.querySelector(".allimContainer");
     const contentRight = document.getElementById("content");
 
-    fetch("../js/allim.json")
+    fetch("../json/allim.json")
         .then(response => response.json())
         .then(data => {
             contentLeft.innerHTML = ""; // 기존 목록 비우기
