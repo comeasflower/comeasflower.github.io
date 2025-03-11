@@ -60,5 +60,24 @@
               <img src="./icon/togo.svg" alt="">
             </button>
           </a>
-  </body> 
+  </body>
+  <script>
+    function toggleBox(event) {
+        // 모바일에서만 클릭 이벤트 적용
+        if (window.innerWidth <= 1200) {
+            const clickedBox = event.currentTarget;
+            
+            // 이미 active인 box의 active 클래스를 제거
+            document.querySelectorAll(".box").forEach(box => box.classList.remove("active"));
+            
+            // 클릭한 box에 active 클래스 추가
+            clickedBox.classList.add("active");
+        }
+    }
+
+    // 모든 box에 클릭 이벤트 추가
+    document.querySelectorAll(".box").forEach(box => {
+        box.addEventListener("click", toggleBox);
+    });
+</script>
 </html>
