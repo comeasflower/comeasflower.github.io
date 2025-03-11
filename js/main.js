@@ -1,9 +1,26 @@
+let timeout; // 타이머 변수
+const idleTime = 300000; // 30초 (밀리초 단위)
+
+function resetTimer() {
+    clearTimeout(timeout); // 기존 타이머 삭제
+    timeout = setTimeout(() => {
+        window.location.href = '../../index.html'; // 이동할 페이지 설정
+    }, idleTime);
+}
+
+// 마우스가 움직이면 타이머 리셋
+document.addEventListener('mousemove', resetTimer);
+document.addEventListener('keydown', resetTimer); // 키 입력도 감지 (선택 사항)
+
+// 초기에 타이머 시작
+resetTimer();
+
 function goBack()   {
     if (document.referrer) {
         sessionStorage.setItem("scrollPosition", window.scrollY); // 현재 스크롤 위치 저장
         history.back();
     } else {
-        window.location.href = 'index.html';
+        window.location.href = '/index.html';
     }
 }
 
