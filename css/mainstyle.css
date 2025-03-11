@@ -76,18 +76,19 @@ button  {
   width: 33vw;
 }
 
-.box:hover  {
-  background-color: #f8f8f8; /* 호버 시 배경 색상 */ 
-}
+@media (min-width: 1201px) {
+  .box:hover  {
+    background-color: #f8f8f8; /* 호버 시 배경 색상 */ 
+  }
 
-.box:hover .outterText{
-  visibility: hidden; /* 호버 시 배경 색상 */  
+  .box:hover .outterText{
+    visibility: hidden; /* 호버 시 배경 색상 */  
+  }
+  
+  .box:hover .innerText{
+    visibility: visible; /* 호버 시 배경 색상 */  
+  }
 }
-
-.box:hover .innerText{
-  visibility: visible; /* 호버 시 배경 색상 */  
-}
-
 
 @media screen and (max-width: 1200px) {
   p {
@@ -100,5 +101,17 @@ button  {
 
   .box  {
     width: 100vw;
+  }
+
+  .box.active  {
+    background-color: #f8f8f8; /* 호버 시 배경 색상 */ 
+  }
+
+  .box.active .innerText {
+    visibility: visible; /* 호버 시 배경 색상 */  
+  }
+
+  .box.active .outterText {
+    visibility: hidden; /* 호버 시 배경 색상 */  
   }
 }
