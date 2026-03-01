@@ -227,9 +227,7 @@
                 "name": "이채영",
                 "contact": "cosmicylee"
             }
-        ]
-    },
-    "active": {
+        ],
         "11.0": [
             {
                 "name": "김한슬",
@@ -256,7 +254,13 @@
                 "contact": "minzz_2i2"
             }
         ],
+    },
+    "active": {
         "12.0": [
+            {
+                "name": "최정안",
+                "contact": "7eong7n"
+            },
             {
                 "name": "한미리",
                 "contact": "rniri_"
@@ -284,10 +288,36 @@
             {
                 "name": "한유민",
                 "contact": "what.youmean"
+            }
+        ],
+        "13.0": [
+            {
+                "name": "임정연",
+                "contact": "iunilihako"
             },
             {
-                "name": "최정안",
-                "contact": "7eong7n"
+                "name": "김소현",
+                "contact": "sohyeontab"
+            },
+            {
+                "name": "김시윤",
+                "contact": "vindur.i"
+            },
+            {
+                "name": "김예진",
+                "contact": "yez.em"
+            },
+            {
+                "name": "김하빈",
+                "contact": "oeitlf"
+            },
+            {
+                "name": "박선율",
+                "contact": "sodlfmaaaa127"
+            },
+            {
+                "name": "최서원",
+                "contact": "sooiary"
             }
         ]
     }
