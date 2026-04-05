@@ -83,6 +83,7 @@
         background: white;
         transition: left 0.3s ease-in-out;
         padding: 0 1.8rem;
+        z-index: 10;
     }
     
     /* 모바일 메뉴가 열릴 때 */

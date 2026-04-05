@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.next');
     const dots = document.querySelectorAll('.dot');
 
+    if (!slider || !prevButton || !nextButton || slides.length === 0 || dots.length === 0) {
+        return;
+    }
+
     let currentSlide = 0;
     let isTransitioning = false;
     const totalSlides = slides.length;

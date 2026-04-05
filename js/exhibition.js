@@ -1,6 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const params = new URLSearchParams(window.location.search);
-    const eventName = params.get("name"); // URL에서 `name` 값 가져오기
+    const query = window.location.search.substring(1);
+    const params = new URLSearchParams(query);
+
+    // URLSearchParams는 '+'를 공백으로 디코딩하므로, 전시 이름에 '+'가 들어갈 수 있는 경우
+    // 원래 인코딩된 값을 직접 디코딩해서 '+'를 보존하도록 합니다.
+    let eventName = params.get("name"); // URL에서 `name` 값 가져오기
+    if (eventName != null) {
+        const rawNameMatch = query.match(/(?:^|&)name=([^&]*)/);
+        if (rawNameMatch) {
+            try {
+                const decodedRawName = decodeURIComponent(rawNameMatch[1]);
+                if (decodedRawName !== eventName) {
+                    eventName = decodedRawName;
+                }
+            } catch (e) {
+                // 잘못된 인코딩 값이면 기본값을 그대로 사용
+            }
+        }
+    }
 
     if (!eventName) {
         console.error("전시 이름이 없습니다.");
