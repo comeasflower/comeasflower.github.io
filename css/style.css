@@ -118,6 +118,7 @@ header {
   width: 100vw;
   top: 0px;
   background-color: white;
+  z-index: 3;
 }
 
 main {
