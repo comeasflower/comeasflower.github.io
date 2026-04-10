@@ -66,6 +66,7 @@ button  {
   background-color: #f8f8f8;
   visibility: hidden;
   width: 33vw;
+  height: 100vh;
   position: absolute;
   display: flex;
   align-items: center;
