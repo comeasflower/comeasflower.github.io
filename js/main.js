@@ -43,12 +43,24 @@ function setupMobileMenu() {
 
   if (!menuButton || !closeButton || !mobileMenu) return;
 
-  const toggleMenu = () => {
-    mobileMenu.classList.toggle("active");
+  const openMenu = () => {
+    mobileMenu.classList.add("active");
+    document.body.classList.add("menu-open");
   };
 
   const closeMenu = () => {
     mobileMenu.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  };
+
+  const toggleMenu = () => {
+    const isOpen = mobileMenu.classList.contains("active");
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   };
 
   menuButton.addEventListener("click", (event) => {
