@@ -202,7 +202,7 @@
         background: white;
         padding: 0 1.8rem 1.8rem;
         transition: left 0.3s ease-in-out;
-        z-index: 1000;
+        z-index: 2;
     }
 
     #content.show {
