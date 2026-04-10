@@ -80,6 +80,7 @@ button {
   border: none;
   cursor: pointer;
   outline: inherit;
+  padding: 0;
 }
 
 ul {
@@ -426,7 +427,6 @@ section {
 
 .notice-item {
   width: 100%;
-  background: none;
   border: none;
   text-align: left;
   cursor: pointer;
