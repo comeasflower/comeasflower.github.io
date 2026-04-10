@@ -168,12 +168,18 @@
         height: calc(100vh - 17.8rem);
     }
 
-    .notice-exp {
+    .allimContainer {
+        height: calc(100vh - 17.8rem);
+    }
+
+    div > .notice-exp {
         display: none;
     }
 
-    .allimContainer {
-        height: calc(100vh - 17.8rem);
+    .notice-exp {
+        padding: 1.2rem 0;
+        flex-direction: column;
+        gap: 0;
     }
 
     .notice-title  {
@@ -185,8 +191,6 @@
     }
 
     .notice-item    {
-        padding: 0 0 0.8rem;
-        margin-bottom: 0.8rem;
         flex-direction: column;
         gap: 0;
     }
@@ -204,6 +208,10 @@
     #content.show {
         left: 0;
     }    
+
+    #content.content-right{
+        padding-top: 2rem;
+    }
 
     .notice-contents    {
         height: calc(100vh - 17.8rem);
