@@ -26,10 +26,11 @@
     } 
 
     main    {
-        margin: 16rem 1.8rem 0rem;
+        margin: 14rem 1.8rem 0rem;
     }
     
     section {
+        margin-top: 1.8rem;
         gap: 1.8rem;
     }
     
@@ -79,7 +80,7 @@
         position: fixed;
         left: 100vw;
         width: calc(100vw - 3.6rem);
-        height: calc(100vh - 16rem);
+        height: calc(100vh - 14rem);
         background: white;
         transition: left 0.3s ease-in-out;
         padding: 0 1.8rem;
